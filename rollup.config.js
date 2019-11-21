@@ -9,7 +9,7 @@ export default {
   output: {
     file: 'dist/index.js',
     format: 'umd',
-    name: 'rest-model-resource',
+    name: 'restful-resource',
   },
 
   plugins: [
