@@ -1,4 +1,4 @@
-export declare namespace RestModelResource {
+export declare namespace RestfulResource {
     interface API {
         create(id?: ModelId | ModelId[]): string;
         edit(id?: ModelId | ModelId[]): string;

@@ -1,4 +1,4 @@
-import { RestModelResource } from './types';
+import { RestfulResource } from './types';
 
 /**
  * Default model url.
@@ -8,7 +8,7 @@ const modelUrl: string = `/{model}/{id}`;
 /**
  * A mapping of paths for the resource method.
  */
-export const paths: Record<RestModelResource.Routes, string> = {
+export const paths: Record<RestfulResource.Routes, string> = {
   create: `/{model}/create`,
   destroy: modelUrl,
   edit: `/{model}/{id}/edit`,
