@@ -10,7 +10,6 @@ export namespace RestfulResource {
   }
 
   export interface Options {
-    baseUrl?: string;
     only?: Routes[];
     except?: Routes[];
   }

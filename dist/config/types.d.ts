@@ -9,7 +9,6 @@ export declare namespace RestfulResource {
         update(id?: ModelId | ModelId[]): string;
     }
     interface Options {
-        baseUrl?: string;
         only?: Routes[];
         except?: Routes[];
     }
