@@ -1,9 +1,9 @@
-import { createModelResource } from './create-model-resource';
-import { RestModelResource } from './config/types';
+import { createRestfulResource } from './create-restful-resource';
+import { RestfulResource } from './config/types';
 
-describe('resource', () => {
+describe('restful resource', () => {
   it('should include all rest methods by default', () => {
-    const model = createModelResource('user');
+    const model = createRestfulResource('user');
 
     expect(model.index).not.toBeUndefined();
     expect(model.create).not.toBeUndefined();
@@ -15,8 +15,8 @@ describe('resource', () => {
   });
 
   it('should include only the methods specified with only', () => {
-    const model = createModelResource('user', {
-      only: [RestModelResource.Routes.Index, RestModelResource.Routes.Edit],
+    const model = createRestfulResource('user', {
+      only: [RestfulResource.Routes.Index, RestfulResource.Routes.Edit],
     });
 
     expect(model.index).not.toBeUndefined();
@@ -30,8 +30,8 @@ describe('resource', () => {
   });
 
   it('should exclude only the methods that are specified in except', () => {
-    const model = createModelResource('user', {
-      except: [RestModelResource.Routes.Show, RestModelResource.Routes.Update],
+    const model = createRestfulResource('user', {
+      except: [RestfulResource.Routes.Show, RestfulResource.Routes.Update],
     });
 
     expect(model.index).not.toBeUndefined();
@@ -45,7 +45,7 @@ describe('resource', () => {
   });
 
   it('should create proper REST routes', () => {
-    const model = createModelResource('users');
+    const model = createRestfulResource('users');
 
     expect(model.index()).toBe('/users');
     expect(model.create()).toBe('/users/create');
@@ -57,7 +57,7 @@ describe('resource', () => {
   });
 
   it('should create proper nested REST routes', () => {
-    const model = createModelResource('users.photos');
+    const model = createRestfulResource('users.photos');
 
     expect(model.index(15)).toBe('/users/15/photos');
     expect(model.create(2)).toBe('/users/2/photos/create');
@@ -69,8 +69,8 @@ describe('resource', () => {
   });
 
   it('should create proper nested REST routes', () => {
-    const model = createModelResource('towns.ratings', {
-      only: [RestModelResource.Routes.Index, RestModelResource.Routes.Update],
+    const model = createRestfulResource('towns.ratings', {
+      only: [RestfulResource.Routes.Index, RestfulResource.Routes.Update],
     });
 
     expect(model.index(15)).toBe('/towns/15/ratings');

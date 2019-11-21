@@ -1,4 +1,4 @@
-import { RestModelResource } from '../config/types';
+import { RestfulResource } from '../config/types';
 
 /**
  * Create the model route.
@@ -9,7 +9,7 @@ export function createModelRoute({
   path,
   prefix,
 }: {
-  id?: RestModelResource.ModelId | RestModelResource.ModelId[];
+  id?: RestfulResource.ModelId | RestfulResource.ModelId[];
   model: string;
   path: string;
   prefix?: string;

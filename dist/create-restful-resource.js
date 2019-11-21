@@ -1,7 +1,7 @@
 import { createModelRoute } from './utils/create-model-route';
 import { paths } from './config';
 import { createNestedModelPrefix } from './utils/create-nested-model-prefix';
-export function createModelResource(modelName, options = {}) {
+export function createRestfulResource(modelName, options = {}) {
     const methods = {};
     let methodKeys = Object.keys(paths);
     if (options.only) {

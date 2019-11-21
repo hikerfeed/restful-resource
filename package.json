@@ -1,5 +1,5 @@
 {
-  "name": "@hikerfeed/http-model-resource",
+  "name": "@hikerfeed/restful-resource",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -44,12 +44,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hikerfeed/rest-model-resource.git"
+    "url": "git+https://github.com/hikerfeed/restful-resource.git"
   },
   "bugs": {
-    "url": "https://github.com/hikerfeed/rest-model-resource/issues"
+    "url": "https://github.com/hikerfeed/restful-resource/issues"
   },
-  "homepage": "https://github.com/hikerfeed/rest-model-resource#readme",
+  "homepage": "https://github.com/hikerfeed/restful-resource#readme",
   "jest": {
     "moduleFileExtensions": [
       "js",
