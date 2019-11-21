@@ -1,0 +1,66 @@
+{
+  "name": "@hikerfeed/http-model-resource",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "release": "rm -rf dist/ && tsc -d && rollup -c",
+    "lint": "eslint --ext .ts --ignore-path .eslintignore .",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier '/**/*' --write",
+    "unit": "jest src/ --maxWorkers 6",
+    "unit:watch": "npm run unit -- --watch"
+  },
+  "author": "hikerfeed",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.7.1",
+    "@types/jest": "^24.0.23",
+    "@typescript-eslint/eslint-plugin": "1.4.2",
+    "@typescript-eslint/parser": "1.4.2",
+    "eslint": "5.9.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "4.0.0",
+    "eslint-friendly-formatter": "4.0.1",
+    "eslint-loader": "2.1.1",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-prettier": "2.6.2",
+    "eslint-restricted-globals": "0.1.1",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "rollup": "^1.27.3",
+    "rollup-plugin-alias": "^2.2.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-typescript2": "^0.25.2",
+    "ts-jest": "24.0.0",
+    "ts-loader": "5.3.3",
+    "ts-node": "8.0.3",
+    "tslib": "^1.10.0",
+    "typescript": "3.3.3333"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hikerfeed/rest-model-resource.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hikerfeed/rest-model-resource/issues"
+  },
+  "homepage": "https://github.com/hikerfeed/rest-model-resource#readme",
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ],
+    "preset": "ts-jest",
+    "transform": {
+      "^.+\\.ts$": "ts-jest",
+      "^.+\\.js$": "babel-jest"
+    },
+    "rootDir": "./src"
+  }
+}
