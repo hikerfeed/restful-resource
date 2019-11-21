@@ -4,6 +4,8 @@
 
 # RESTful Resource
 
+> The JavaScript utility for creating consistent and RESTful resource requests, so you don't have to.
+
 <img src="https://github.com/hikerfeed/restful-resource/workflows/Node CI/badge.svg" />
 
 ---
@@ -18,7 +20,7 @@ npm i @hikerfeed/restful-resource --save
 
 ### Usage
 
-A simple resource for enforcing REST conventions in your HTTP requests. RESTful resource does _not_ make HTTP requests. Instead, it returns the proper routes that would match the controller name. For example, take this Laravel route which maps to a controller action:
+RESTful Resource is a JavaScript utility for creating consistent and RESTful resource requests, so you don't have to. RESTful resource does _not_ make HTTP requests. Instead, it returns the proper routes that would match the controller name. For example, take this Laravel route which maps to a controller action:
 
 
 ```php
