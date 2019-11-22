@@ -4,7 +4,7 @@
 
 # RESTful Resource
 
-> The JavaScript utility for creating consistent and RESTful resource requests, so you don't have to.
+> The JavaScript URL builder for creating consistent and RESTful resource requests, so you don't have to.
 
 <img src="https://github.com/hikerfeed/restful-resource/workflows/Node CI/badge.svg" />
 
@@ -20,7 +20,7 @@ npm i @hikerfeed/restful-resource --save
 
 ### Usage
 
-RESTful Resource is a JavaScript utility for creating consistent and RESTful resource requests, so you don't have to. RESTful resource does _not_ make HTTP requests. Instead, it returns the proper routes that would match the controller name. For example, take this Laravel route which maps to a controller action:
+RESTful Resource is a JavaScript URL builder for creating consistent and RESTful resource requests, so you don't have to. RESTful resource does _not_ make HTTP requests. Instead, it generates the proper routes that would match the controller name. For example, take this Laravel route which maps to a controller action:
 
 
 ```php
@@ -90,7 +90,7 @@ This would generate the following routes:
 - `POST  /hikes   HikesController@destroy`
 
 
-To ensure you're not calling routes that don't exist on your API, you can pass the `exclude` option like so:
+To ensure you're not calling routes that don't exist on your API, you can pass the `except` option like so:
 
 ```ts
 // typescript
