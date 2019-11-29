@@ -14,7 +14,7 @@ export namespace RestfulResource {
     except?: Routes[];
   }
 
-  export const enum Routes {
+  export enum Routes {
     Create = 'create',
     Edit = 'edit',
     Destroy = 'destroy',
