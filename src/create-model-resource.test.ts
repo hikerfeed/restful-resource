@@ -68,6 +68,14 @@ describe('restful resource', () => {
     expect(model.destroy(['5', 200])).toBe('/users/5/photos/200');
   });
 
+  it('should omit a null, undefined, or empty id for a child resource that does not have a parent', () => {
+    const model = createRestfulResource('users.photos');
+
+    expect(model.show([null, 4])).toBe('/users/photos/4');
+    expect(model.show([undefined, 4])).toBe('/users/photos/4');
+    expect(model.show(['', 4])).toBe('/users/photos/4');
+  });
+
   it('should create proper nested REST routes', () => {
     const model = createRestfulResource('towns.ratings', {
       only: [RestfulResource.Routes.Index, RestfulResource.Routes.Update],

@@ -20,7 +20,7 @@ export function createModelRoute({
 
   if (Array.isArray(id)) {
     id.forEach(k => {
-      joinedPath = joinedPath.replace(/id/, `${k}`);
+      joinedPath = joinedPath.replace(/id/, k ? `${k}` : '');
     });
   } else if (typeof id !== 'undefined') {
     joinedPath = joinedPath.replace(/id/, <string>id);

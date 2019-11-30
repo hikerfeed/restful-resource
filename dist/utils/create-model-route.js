@@ -3,7 +3,7 @@ export function createModelRoute({ id, model, path, prefix, }) {
     joinedPath = joinedPath.replace(/model/g, model);
     if (Array.isArray(id)) {
         id.forEach(k => {
-            joinedPath = joinedPath.replace(/id/, `${k}`);
+            joinedPath = joinedPath.replace(/id/, k ? `${k}` : '');
         });
     }
     else if (typeof id !== 'undefined') {

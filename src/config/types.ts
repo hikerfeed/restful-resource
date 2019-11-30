@@ -24,5 +24,5 @@ export namespace RestfulResource {
     Update = 'update',
   }
 
-  export type ModelId = number | string;
+  export type ModelId = number | string | null | undefined;
 }
